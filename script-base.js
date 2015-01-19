@@ -94,7 +94,7 @@ Generator.prototype.addScriptToIndex = function (script) {
       file: fullPath,
       needle: '<!-- endbuild -->',
       splicable: [
-        '<script src="scripts/' + script.toLowerCase().replace(/\\/g, '/') + '.js"></script>'
+        '<script src="modules/' + script.toLowerCase().replace(/\\/g, '/') + '.js"></script>'
       ]
     });
   } catch (e) {
@@ -110,9 +110,9 @@ Generator.prototype.generateSourceAndTest = function (appTemplate, testTemplate,
     this.cameledName = this.classedName;
   }
 
-  this.appTemplate(appTemplate, path.join('scripts', targetDirectory, this.name));
+  this.appTemplate(appTemplate, path.join('', 'modules/'+targetDirectory, appTemplate));
   this.testTemplate(testTemplate, path.join(targetDirectory, this.name));
   if (!skipAdd) {
-    this.addScriptToIndex(path.join(targetDirectory, this.name));
+    this.addScriptToIndex(path.join('modules/'+targetDirectory, appTemplate));
   }
 };

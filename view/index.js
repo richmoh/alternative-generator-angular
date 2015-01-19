@@ -28,8 +28,9 @@ Generator.prototype.createViewFiles = function createViewFiles() {
     'app/views/view.html',
     path.join(
       this.env.options.appPath,
-      'views',
-      this.name.toLowerCase() + '.html'
+      'modules/', //views
+      this.name.toLowerCase(),
+      'view.html'
     )
   );
 };

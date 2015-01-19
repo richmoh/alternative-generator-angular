@@ -28,8 +28,9 @@ var Generator = module.exports = function Generator() {
     this.foundWhenForRoute = true;
   }
 
-  this.hookFor('angular:controller');
-  this.hookFor('angular:view');
+  this.hookFor('modular-angular:controller');
+  this.hookFor('modular-angular:service');
+  this.hookFor('modular-angular:view');
 };
 
 util.inherits(Generator, ScriptBase);
