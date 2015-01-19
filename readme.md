@@ -2,8 +2,6 @@
 
 > An alternative module based Yeoman generator for AngularJS - Forked from https://github.com/yeoman/generator-angular
 
-[Roadmap for upcoming plans/features/fixes](https://github.com/yeoman/generator-angular/issues/553)
-
 ## Usage
 
 It's early days yet so nothing super easy and fancy I'm afraid. To install do the following....
